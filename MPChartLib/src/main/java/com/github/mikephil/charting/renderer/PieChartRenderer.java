@@ -482,7 +482,17 @@ public class PieChartRenderer extends DataRenderer {
 
             for (int j = 0; j < entryCount; j++) {
 
-                PieEntry entry = dataSet.getEntryForIndex(j);
+                PieEntry entry = null;
+                try {
+                    entry = dataSet.getEntryForIndex(j);
+                }
+                catch (IndexOutOfBoundsException e)
+                {
+                    e.printStackTrace();
+                }
+                if (entry == null)
+                    return;
+
 
                 if (xIndex == 0)
                     angle = 0.f;
