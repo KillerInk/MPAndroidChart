@@ -5,12 +5,10 @@ group='com.github.philjay'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion '28.0.3'
+    buildToolsVersion '30.0.3'
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 28
-        versionCode 3
-        versionName '3.1.0'
     }
     buildTypes {
         release {
@@ -24,7 +22,7 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.annotation:annotation:1.0.0'
+    implementation 'androidx.annotation:annotation:1.2.0'
     testImplementation 'junit:junit:4.12'
 }
 
